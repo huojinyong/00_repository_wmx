@@ -108,7 +108,7 @@ basicstyle=\footnotesize\ttfamily}
 \usepackage{hyperref}
 \hypersetup{ % TODO: PDF meta Data
   pdftitle={Kaggle sildes},
-  pdfauthor={Bing Liu},
+  pdfauthor={Wang Mingxi},
   pdfpagemode={FullScreen},
   pdfborder={0 0 0}
 }
@@ -155,9 +155,9 @@ basicstyle=\footnotesize\ttfamily}
 % title
 % TODO: Customize to your Own Title, Name, Address
 %
-\title{Shopee - Price Match Guarantee}
+\title{Summary Last Week - 2021.4.19}
 \author{
-Bing Liu
+Wang Mingxi
 \\
 \\Jilin University
 \\College of Computer Science and Technology
@@ -194,19 +194,27 @@ cf={flip00-kaggle},
 %%==========================================================================================
 
 
-\section{Overview of this competition}
+\section{Job summary}
 
 %%==========================================================================================
 %%
-\begin{slide}{Problem background}
+\begin{slide}{Git Project}
 
 \begin{itemize}
-\item This problem is an active competition, which prize money is \$30000. %So it is a little difficult for us.
+\item The local repository is created on GitHub and three folders are created.
+Local and remote repositories have also been synchronized. %So it is a little difficult for us.
 
 \bigskip
 
-\item The competition purpose is to determine if two products are the same by their images.
+\item Modified the text in the bottom right corner of the file by uploading the file to GitHub and then pulling it down.
 \end{itemize}
+
+\begin{center}
+	\begin{figure}[htbp]
+		\includegraphics[scale=0.6]{./pic/kaka2.eps}
+		\caption{The repository on GitHub}
+	\end{figure}
+\end{center}
 
 \end{slide}
 %%
@@ -214,55 +222,99 @@ cf={flip00-kaggle},
 
 %%==========================================================================================
 %%
-\begin{slide}{Problem description}
+\begin{slide}{Notebook Amend}
 
 \raggedright
+I have read and studied one of XXX and have modified its contents.
 
-Retail companies use a variety of methods to assure customers that their products are the cheapest. Among them is product matching, which allows a company to offer products at rates that are competitive to the same product sold by another retailer. To perform these matches automatically requires a thorough machine learning approach, this is the mainly problem we need to solution!
-\bigskip
-Two different images of similar wares may represent the same product or two completely different items. Retailers want to avoid misrepresentations and other issues that could come from conflating two dissimilar products. Currently, a combination of deep learning and traditional machine learning analyzes image and text information to compare similarity. But major differences in images, titles, and product descriptions prevent these methods from being entirely effective.
-\bigskip
-In this competition, we’ll apply our machine learning skills to build a model that predicts which items are the same products.
-\end{slide}
-%%
-%%==========================================================================================
+\begin{center}
+	\begin{figure}[htbp]
+		\includegraphics[scale=0.3]{./pic/notebook.eps}
+		\caption{The repository on GitHub}
+	\end{figure}
+\end{center}
 
-
-
-\section{Data}
-
-%%==========================================================================================
-%%
-\begin{slide}{Data description}
-
-Task is to identify which products have been posted repeatedly. The differences between related products may be subtle while photos of identical products may be wildly different!
-\bigskip
-only the first few rows or images of the test set are published; the remainder are only available to your notebook when it is submitted. Expect to find roughly 70,000 images in the hidden test set. The few test rows and images that are provided are intended to illustrate the hidden test set format and folder structure.
 
 \end{slide}
 %%
 %%==========================================================================================
+\begin{slide}{Kaggle Subject}
+%当有多个Kaggle Subject而只想在目录出现一次时，在后面几次Kaggle Subject前加上[toc=,bm=]
+	\raggedright
+	The San Francisco Crime Classification Forecast is a multi-classification problem that asks us to predict crime types.Given some characteristics, let the model predict the type of output crime based on the input.
+	\begin{center}
+		\begin{figure}[htbp]
+			\includegraphics[scale=0.4]{./pic/SF.eps}
+			\caption{The repository on GitHub}
+		\end{figure}
+	\end{center}
+
+\end{slide}
+
+\begin{slide}[toc=,bm=]{Kaggle Subject}
+	\begin{itemize}
+	\item The data analysis
+	\end{itemize}
+	\bigskip
+	
+	The data includes the time of the crime, the place of the crime, the description of the crime (in text form), the final disposition, the type of crime, etc.Crime data correlate with crime types.The function of the model is to analyze the data set to find out the relationship and carry out the classification and prediction of crime types.
+	
+\end{slide}
+
+\begin{slide}[toc=,bm=]{Kaggle Subject}
+	\begin{itemize}
+	\item The data processing
+	\end{itemize}
+	\bigskip
+	
+	The daily features can be decomposed into more detailed contents to obtain more detailed features, thus improving the accuracy of the model.
+	For example, the date is disassembled from a comprehensive form of adults, months, days, hours, minutes, etc
+	What we found was that there was a difference in the type of crime that was committed inside the building and at the intersection.Findings like this suggest that there are characteristics that have a direct impact on the predicted outcome, as will be explained in more detail later.
+\end{slide}
+
+\begin{slide}[toc=,bm=]{Kaggle Subject}
+	\begin{itemize}
+		\item The data cleaning
+	\end{itemize}
+	\bigskip
+	Some data needs to be cleaned up.There are duplicate elements in the data set, and those are the ones that we want to get rid of.In addition, in some obviously against the common sense of the wrong data, we also want to delete.For example, we find that there are crimes that we know are located in the ocean by latitude and longitude analysis, and those are the few crimes that we don't care about.
+	\begin{center}
+		\begin{figure}[htbp]
+			\includegraphics[scale=0.6]{./pic/cf_map.eps}
+			\caption{The repository on GitHub}
+		\end{figure}
+	\end{center}	
+	
+\end{slide}
+
+\begin{slide}[toc=,bm=]{Kaggle Subject}
+	\begin{itemize}
+		\item Build a model
+	\end{itemize}
+	\bigskip
+	The decision tree was used to build the model. After 23 rounds of training, the model training was completed and the score on the test set was 2.3.However, there are still some unexplained errors and problems in the program operation. I will continue to modify them as soon as possible.
+	
+\end{slide}
+
+\section{Next Week's Work}
+
+
+\begin{slide}{Work arrangement}
+
+I will modify the remaining notebook, and then complete the git repository.
+Also the Kaggle topic related process to continue to improve, and modify the code related bugs, complete the coding work
+
+
+\end{slide}
+%%
+%%==========================================================================================
 
 %%==========================================================================================
 %%
-\begin{slide}{Files}
+\begin{slide}{Thanks}
 
-\begin{itemize}
-\item train/test.csv - the training set metadata. Each row contains the data for a single posting. Multiple postings might have the exact same image ID, but with different titles or vice versa.
-\begin{itemize}
-\item posting\_id - the ID code for the posting.
-\item image - the image id/md5sum.
-\item image\_phash - a perceptual hash of the image.
-\item title - the product description for the posting.
-\item label\_group - ID code for all postings that map to the same product. Not provided for the test set.
-\end{itemize}
-\item train/test images - the images associated with the postings.
-\item sample\_submission.csv - a sample submission file in the correct format.
-\begin{itemize}
-\item posting\_id - the ID code for the posting.
-\item matches - Space delimited list of all posting IDs that match this posting. Posts always selfmatch. Group sizes were capped at 50, so there is no need to predict more than 50 matches.
-\end{itemize}
-\end{itemize}
+Thankes!
+
 \end{slide}
 %%
 %%==========================================================================================
@@ -272,24 +324,14 @@ only the first few rows or images of the test set are published; the remainder a
 %\includegraphics*[scale=0.2]{1.png}
 %\end{slide}
 \begin{slide}[toc=,bm=]{Algorithm}
-	\begin{center}
-		\begin{figure}[htbp]
-			\includegraphics[scale=0.2]{./figure/model.eps}
-			\caption{model}
-		\end{figure}
-	\end{center}
+
 \end{slide}
 
 \section{Conclusion}
 %%==========================================================================================
 %%
 \begin{slide}[toc=,bm=]{Conclusion}
-	\begin{center}
-		\begin{figure}[htbp]
-			\includegraphics[scale=0.7]{./figure/result.eps}
-			\caption{result}
-		\end{figure}
-	\end{center}
+
 \end{slide}
 %\begin{slide}{Result}
 %	\includegraphics*[scale=0.7]{result.png}
@@ -297,9 +339,7 @@ only the first few rows or images of the test set are published; the remainder a
 
 \begin{slide}[toc=,bm=]{Conclusion}
 
-In the first algorithm, although the CV score for baseline is 0.6528, we only use the image information to match the products whether they are belong to the same product. 
-\bigskip
-In the next week, we will try to add the image\_phash and title information to our model to imporve score.
+
 
 \end{slide}
 %%
@@ -320,7 +360,7 @@ rcolwidth=0.65\linewidth
 }
 {
 \vspace{\stretch{1}}
-Bing Liu\\
+Wang Mingxi\\
 College of Computer Science and Technology\\
 Jilin University, China
 \begin{description}
