@@ -155,7 +155,7 @@ basicstyle=\footnotesize\ttfamily}
 % title
 % TODO: Customize to your Own Title, Name, Address
 %
-\title{Summary Last Week - 2021.4.19}
+\title{The Final Report}
 \author{
 Wang Mingxi
 \\
@@ -170,7 +170,7 @@ Wang Mingxi
 % TODO: Customize the left footer, and right footer
 rf=\href{http://www.tulip.org.au}{
 Last Changed by: \textsc{\gitCommitterName}\ \gitVtagn-\gitAbbrevHash\ (\gitAuthorDate)
-%Last Changed by: \textsc{Bing Liu}\ \gitVtagn-\gitAbbrevHash\ (\today)
+%Last Changed by: \textsc{Mingxi Wang}\ \gitVtagn-\gitAbbrevHash\ (\today)
 },
 cf={flip00-kaggle},
 }
@@ -194,25 +194,21 @@ cf={flip00-kaggle},
 %%==========================================================================================
 
 
-\section{Job summary}
+\section{Research motivation and context}
 
 %%==========================================================================================
 %%
-\begin{slide}{Git Project}
+\begin{slide}{Project Objectives}
 
 \begin{itemize}
-\item The local repository is created on GitHub and three folders are created.
-Local and remote repositories have also been synchronized. %So it is a little difficult for us.
+\item The project analyzed 12 years of crime reports from all of San Francisco's neighborhoods to create a model that can predict crime categories at a given time and place.
 
-\bigskip
-
-\item Modified the text in the bottom right corner of the file by uploading the file to GitHub and then pulling it down.
 \end{itemize}
 
 \begin{center}
 	\begin{figure}[htbp]
-		\includegraphics[scale=0.6]{./pic/kaka2.eps}
-		\caption{The repository on GitHub}
+		\includegraphics[scale=0.4]{./pic/SF.eps}
+		\caption{project preview}
 	\end{figure}
 \end{center}
 
@@ -222,126 +218,162 @@ Local and remote repositories have also been synchronized. %So it is a little di
 
 %%==========================================================================================
 %%
-\begin{slide}{Notebook Amend}
+\begin{slide}{Project background}
 
 \raggedright
-I have read and studied one of XXX and have modified its contents.
-
-\begin{center}
-	\begin{figure}[htbp]
-		\includegraphics[scale=0.3]{./pic/notebook.eps}
-		\caption{The repository on GitHub}
-	\end{figure}
-\end{center}
-
+Crime is a kind of behavior that does great harm to the society. It brings great loss of life and property to human beings.In modern society, human beings prevent crime through strict judicial means, and research on crime prevention based on sociology, psychology and law.The objective of this project is to quantitatively analyze a data set of nearly 12 years of crime reports from all San Francisco neighborhoods by computer means and to create a model that predicts the type of crime that will occur given information such as time and location.
 
 \end{slide}
+
+\section{Research contents and methods}
+
 %%
 %%==========================================================================================
-\begin{slide}{Kaggle Subject}
+\begin{slide}{Evaluation metric}
 %当有多个Kaggle Subject而只想在目录出现一次时，在后面几次Kaggle Subject前加上[toc=,bm=]
 	\raggedright
-	The San Francisco Crime Classification Forecast is a multi-classification problem that asks us to predict crime types.Given some characteristics, let the model predict the type of output crime based on the input.
+	Multi-class logarithmic loss, which measures that the model output is a probability value between 0 and 1.
+
+
+\end{slide}
+
+\begin{slide}{Data set preview}
+	\begin{itemize}
+	\item 878,049 samples, a total of 9 features.
+	\end{itemize}
+	Date, category, description, day of the week, name of the police district, solution, approximate street address of the crime, longitude, latitude.\\
 	\begin{center}
 		\begin{figure}[htbp]
-			\includegraphics[scale=0.4]{./pic/SF.eps}
-			\caption{The repository on GitHub}
+			\includegraphics[scale=0.6]{./pic/qmcode1.eps}
+			\caption{preview}
 		\end{figure}
 	\end{center}
-
-\end{slide}
-
-\begin{slide}[toc=,bm=]{Kaggle Subject}
-	\begin{itemize}
-	\item The data analysis
-	\end{itemize}
-	\bigskip
+	First date:  2003-01-06 00:01:00\\
+	Last date:  2015-05-13 23:53:00\\
+	Test data shape  (878049, 9)\\
 	
-	The data includes the time of the crime, the place of the crime, the description of the crime (in text form), the final disposition, the type of crime, etc.Crime data correlate with crime types.The function of the model is to analyze the data set to find out the relationship and carry out the classification and prediction of crime types.
 	
 \end{slide}
 
-\begin{slide}[toc=,bm=]{Kaggle Subject}
+\begin{slide}[toc=,bm=]{Data set preview II}
 	\begin{itemize}
-	\item The data processing
+	\item train.head()
 	\end{itemize}
-	\bigskip
-	
-	The daily features can be decomposed into more detailed contents to obtain more detailed features, thus improving the accuracy of the model.
-	For example, the date is disassembled from a comprehensive form of adults, months, days, hours, minutes, etc
-	What we found was that there was a difference in the type of crime that was committed inside the building and at the intersection.Findings like this suggest that there are characteristics that have a direct impact on the predicted outcome, as will be explained in more detail later.
-\end{slide}
-
-\begin{slide}[toc=,bm=]{Kaggle Subject}
-	\begin{itemize}
-		\item The data cleaning
-	\end{itemize}
-	\bigskip
-	Some data needs to be cleaned up.There are duplicate elements in the data set, and those are the ones that we want to get rid of.In addition, in some obviously against the common sense of the wrong data, we also want to delete.For example, we find that there are crimes that we know are located in the ocean by latitude and longitude analysis, and those are the few crimes that we don't care about.
 	\begin{center}
 		\begin{figure}[htbp]
-			\includegraphics[scale=0.6]{./pic/cf_map.eps}
-			\caption{The repository on GitHub}
+			\includegraphics[scale=0.6]{./pic/qmyangben.eps}
+			\caption{preview}
 		\end{figure}
-	\end{center}	
-	
+	\end{center}
 \end{slide}
 
-\begin{slide}[toc=,bm=]{Kaggle Subject}
+\begin{slide}{Data cleaning}
 	\begin{itemize}
-		\item Build a model
+		\item There are 2323 duplicate items that need to be removed
 	\end{itemize}
-	\bigskip
-	The decision tree was used to build the model. After 23 rounds of training, the model training was completed and the score on the test set was 2.3.However, there are still some unexplained errors and problems in the program operation. I will continue to modify them as soon as possible.
+		train.duplicated().sum()
+	\begin{itemize}
+		\item Throw away samples in a range of longitude and latitude (e.g., 50)
+	\end{itemize}
+	
 	
 \end{slide}
 
-\section{Next Week's Work}
-
-
-\begin{slide}{Work arrangement}
-
-I will modify the remaining notebook, and then complete the git repository.
-Also the Kaggle topic related process to continue to improve, and modify the code related bugs, complete the coding work
-
-
+\begin{slide}{Characteristics of the engineering}
+	\begin{center}
+		\begin{figure}[htbp]
+			\includegraphics[scale=0.8]{./pic/qmzhengtai.eps}
+			\caption{Distribution of number of incidents per day}
+		\end{figure}
+	\end{center}
+	
 \end{slide}
-%%
-%%==========================================================================================
 
-%%==========================================================================================
-%%
-\begin{slide}{Thanks}
-
-Thankes!
-
+\begin{slide}[toc=,bm=]{Characteristics of the engineering II}
+Similarly, there was no significant deviation in the frequency of events over the course of the week.
+	\begin{center}
+		\begin{figure}[htbp]
+			\includegraphics[scale=0.8]{./pic/qmzhifangtu.eps}
+			\caption{incidents per Weekday}
+		\end{figure}
+	\end{center}
+	
 \end{slide}
-%%
-%%==========================================================================================
 
-\section{Algorithm}
-%\begin{slide}{Algorithm one}
-%\includegraphics*[scale=0.2]{1.png}
-%\end{slide}
-\begin{slide}[toc=,bm=]{Algorithm}
+\begin{slide}[toc=,bm=]{Characteristics of the engineering III}
+A total of 39 discrete categories of incidents were recorded by police stations, the most common being theft (19.91\%), non-criminal cases (10.50\%) and assault (8.77\%)
 
+		\begin{figure}[htbp]
+			\includegraphics[scale=0.5]{./pic/qmshuxingtu.eps}
+			\caption{incidents per Crime Category}
+		\end{figure}
+	
+\end{slide}
+
+\begin{slide}[toc=,bm=]{Characteristics of the engineering IV}
+The chart below shows the average number of incidents per hour for the five crime categories.
+Obviously, different crimes occur with different frequencies at different times of the day.
+Prostitution, for example, takes place mostly at night, gambling incidents take place from late at night until morning, and burglaries from early morning until afternoon.
+As before, this is clear evidence that time parameters will also play an important role.
+	
+	\begin{figure}[htbp]
+		\includegraphics[scale=0.9]{./pic/qmzhexiantu.eps}
+		\caption{average number of incidents per hour}
+	\end{figure}
+	
+\end{slide}
+
+\begin{slide}[toc=,bm=]{Characteristics of the engineering V}
+	\begin{itemize}
+		\item From the "Date" field, we extracted the date, month, year, hours, minutes, days, and days since the first day.
+		\item We extracted from the "Address" field whether the event occurred at the intersection or on a building component.
+	\end{itemize}
+\end{slide}
+\begin{slide}{Information coding}
+	\raggedright
+	The discrete data is converted to a number between 0 and N-1, where N is the number of different values in a list.You can think of it as the number of different values of a feature.
+\end{slide}
+\begin{slide}{Training model}
+	\begin{itemize}
+	\item Train 23 Epochs.
+	\item Use cross validation to evaluate the quality of our model.\\
+	After training, the model obtained:
+	\item a cross validation score of 2.46.
+	\item it got 2.49 on the test set.
+	\end{itemize}
+\end{slide}
+
+\section{Architecture of the model}
+
+\begin{slide}{Architecture of the model}
+1. Make the decision tree fit the data\\
+2. Evaluation model\\
+3. Add weight to incorrect samples.\\
+4. Select the leaf nodes with the greatest incremental loss for growth.\\
+5. Generate the tree at the node in the previous step.\\
+6. Go to Step 2 for the cycle\\
 \end{slide}
 
 \section{Conclusion}
+
+
+\begin{slide}{Conclusion}
+
+Conclusion: Based on data analysis, processing and utilization, our model can effectively predict crime types.By using the multi-classification algorithm to analyze the input features and update the model parameters through iterative training, our model can be trained more and more accurately.So as to complete the task of classification prediction.
+
+
+\end{slide}
+%%
+%%==========================================================================================
+
 %%==========================================================================================
 %%
-\begin{slide}[toc=,bm=]{Conclusion}
 
-\end{slide}
-%\begin{slide}{Result}
-%	\includegraphics*[scale=0.7]{result.png}
-%\end{slide}
-
-\begin{slide}[toc=,bm=]{Conclusion}
+%%
+%%==========================================================================================
 
 
 
-\end{slide}
 %%
 %%==========================================================================================
 
@@ -364,8 +396,8 @@ Wang Mingxi\\
 College of Computer Science and Technology\\
 Jilin University, China
 \begin{description}
- \item[\textcolor{orange}{\faEnvelope}] \href{mailto:bliu@tulip.academy}
- {\textsc{\footnotesize{bliu@tulip.academy}}}
+ \item[\textcolor{orange}{\faEnvelope}] \href{mailto:mxwang@tulip.academy}
+ {\textsc{\footnotesize{mxwang@tulip.academy}}}
 
  \item[\textcolor{orange}{\faHome}] \href{http://www.tulip.org.au}
  {\textsc{\footnotesize{Team for Universal Learning and Intelligent Processing}}}

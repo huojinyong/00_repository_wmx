@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=latex 2021.4.12)  19 APR 2021 17:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=latex 2021.4.12)  24 APR 2021 21:26
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -2222,67 +2222,105 @@ LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 19.28804pt on input line 197.
 
 [4]
-File: ./pic/kaka2.eps Graphic file (type eps)
- <./pic/kaka2.eps>
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 219.
-See the caption package documentation for explanation.
-
-[5]
-File: ./pic/notebook.eps Graphic file (type eps)
- <./pic/notebook.eps>
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 238.
-See the caption package documentation for explanation.
-
-[6]
 File: ./pic/SF.eps Graphic file (type eps)
  <./pic/SF.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 252.
+(caption)                particular \caption on input line 215.
 See the caption package documentation for explanation.
 
-[7] [8] [9]
-File: ./pic/cf_map.eps Graphic file (type eps)
- <./pic/cf_map.eps>
+[5] [6] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 256--256
+
+ []
+
+File: ./pic/qmcode1.eps Graphic file (type eps)
+<./pic/qmcode1.eps>
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 288.
+(caption)                particular \caption on input line 256.
 See the caption package documentation for explanation.
 
-[10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--256
+
+ []
+
+[9]
+File: ./pic/qmyangben.eps Graphic file (type eps)
+ <./pic/qmyangben.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 268.
+See the caption package documentation for explanation.
+
+[10] [11]
+File: ./pic/qmzhengtai.eps Graphic file (type eps)
+ <./pic/qmzhengtai.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 290.
+See the caption package documentation for explanation.
+
+[12]
+File: ./pic/qmzhifangtu.eps Graphic file (type eps)
+ <./pic/qmzhifangtu.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 301.
+See the caption package documentation for explanation.
+
+[13]
+File: ./pic/qmshuxingtu.eps Graphic file (type eps)
+ <./pic/qmshuxingtu.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 311.
+See the caption package documentation for explanation.
+
+[14]
+File: ./pic/qmzhexiantu.eps Graphic file (type eps)
+ <./pic/qmzhexiantu.eps>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 324.
+See the caption package documentation for explanation.
+
+[15] [16] [17] [18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 355--355
+
+ []
+
+[20] [21] [22]
 
 Package enumitem Warning: Negative labelwidth. This does not make much
-(enumitem)                sense, on input line 375.
+(enumitem)                sense, on input line 407.
 
 LaTeX Font Info:    Trying to load font information for U+fontawesometwo on inp
-ut line 375.
+ut line 407.
 (d:/texlive/2021/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
 
 LaTeX Font Warning: Font shape `U/fontawesometwo/b/n' undefined
-(Font)              using `U/fontawesometwo/m/n' instead on input line 375.
+(Font)              using `U/fontawesometwo/m/n' instead on input line 407.
 
 LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 13.39188pt on input line 375.
+(Font)              scaled to size 13.39188pt on input line 407.
 LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 9.29993pt on input line 375.
-[20] (./slides.aux)
+(Font)              scaled to size 9.29993pt on input line 407.
+[23] (./slides.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 50205 strings out of 478995
- 1068661 string characters out of 5862233
- 1665766 words of memory out of 5000000
- 66643 multiletter control sequences out of 15000+600000
+ 50234 strings out of 478995
+ 1069159 string characters out of 5862233
+ 1666739 words of memory out of 5000000
+ 66669 multiletter control sequences out of 15000+600000
  438404 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  104i,9n,117p,2371b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on slides.dvi (20 pages, 240084 bytes).
+Output written on slides.dvi (23 pages, 298416 bytes).
